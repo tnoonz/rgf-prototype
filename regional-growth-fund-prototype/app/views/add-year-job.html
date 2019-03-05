@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/jobs-created">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Add jobs</h1>
+
+      <form class="form" action="/jobs-created" method="post">
+
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+    Job title
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="width-10">
+Number of this job created
+</label>
+<input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="width-10">
+Employer
+</label>
+<input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="width-10">
+Location postcode
+</label>
+<input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="width-10">
+Salary (£)
+</label>
+<input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Sector
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">Manufacturing</option>
+    <option value="updated" selected>Services</option>
+    <option value="views">Wholesale</option>
+    <option value="comments">Development</option>
+  </select>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    NVQ Level
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">1</option>
+    <option value="updated" selected>2</option>
+    <option value="views">3</option>
+    <option value="comments">4</option>
+    <option value="comments">5</option>
+  </select>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    How many years will these jobs be sustained?
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">1 year</option>
+    <option value="updated" selected>2 years</option>
+    <option value="views">3 years</option>
+    <option value="comments">4 years</option>
+    <option value="comments">5 years</option>
+    <option value="comments">6 years</option>
+    <option value="comments">7 years</option>
+    <option value="comments">8 years</option>
+    <option value="comments">9 years</option>
+    <option value="comments">10+ years</option>
+  </select>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <label class="govuk-label" for="sort">
+        Which best describes this job?
+      </label>
+    </legend>
+    <span id="waste-hint" class="govuk-hint">
+      Select all that apply
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          This is a job created by this project
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          This is an existing job sustained by this project
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          This job is created directly by this project
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          This job is created indirectly by this project
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+        <button class="govuk-button">Add jobs</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/partner-funding">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Company/industrial partner funding by year</h1>
+
+      <form class="form" action="/partner-funding" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Year
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published">2018/19</option>
+            <option value="updated" selected>2019/20</option>
+            <option value="views">2020/21</option>
+            <option value="comments">2021/22</option>
+          </select>
+        </div>
+
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+    Funding for research and development
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="width-10">
+Funding for capital equipment
+</label>
+<input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="width-10">
+Funding for skills and training
+</label>
+<input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

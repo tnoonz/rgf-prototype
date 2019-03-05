@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Manufacturing Readiness Level</h1>
+
+      <form class="form" action="/add-project-mrl" method="post">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+                <div class="govuk-form-group ">
+                    <label class="govuk-label" for="60">
+            Add manufacturing readiness levels by project.
+        </label>
+
+                    <table class="govuk-table list-table" id="60">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="col">Projects</th>
+                                <th class="govuk-table__header" scope="col"></th>
+                            </tr>
+                        </thead>
+                            <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">You have not added any projects</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                            <div class="govuk-form-group">
+                                <input type="submit" name="list-add-60" value="Add projects" href="/add-project-trl">
+                            </div>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="govuk-button" href="task-list">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

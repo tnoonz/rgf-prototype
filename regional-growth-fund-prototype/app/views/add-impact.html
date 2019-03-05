@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/wider-impacts">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Add Impact</h1>
+
+      <form class="form" action="/wider-impacts" method="post">
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Which project is this impact related to?
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"selected>1</option>
+    <option value="updated">2</option>
+    <option value="views">3</option>
+    <option value="comments">4</option>
+  </select>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    What type of impact is it?
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"selected>Environmental</option>
+    <option value="updated">Health</option>
+    <option value="views">Agglomeration</option>
+    <option value="comments">Land Value</option>
+    <option value="comments">GHG Emissions</option>
+    <option value="comments">Local Environmental Impacts</option>
+    <option value="comments">Increasing attractiveness of Area to Business</option>
+    <option value="comments">Likelihood of Creating Jobs</option>
+  </select>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <label class="govuk-label" for="width-10">
+        Is this impact positive or negative?
+      </label>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name-1">
+          Positive
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          Negative
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    How many years will this impact be sustained?
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published" selected>1</option>
+    <option value="updated">2</option>
+    <option value="views">3</option>
+    <option value="comments">4</option>
+    <option value="comments">5</option>
+  </select>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    Please describe the impact:
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Estimated value of impact unit
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published" selected>£ value</option>
+    <option value="updated">Quality adjusted life years</option>
+    <option value="views">Tonnes of carbon dioxide equivalent</option>
+  </select>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+    Estimated value of impact
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+        <button class="govuk-button">Add impact</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

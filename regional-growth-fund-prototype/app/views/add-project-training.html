@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/training">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Add training opportunity</h1>
+
+      <form class="form" action="/training" method="post">
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Select project this training will be associated with
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"selected>Project 1</option>
+    <option value="updated">Project 2</option>
+    <option value="views">Project 3</option>
+    <option value="comments">Project 4</option>
+  </select>
+</div>
+
+  <div class="govuk-form-group">
+<label class="govuk-label" for="width-10">
+  What is the job title?
+</label>
+<input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+  <div class="govuk-form-group">
+<label class="govuk-label" for="width-10">
+  Which company is this job in?
+</label>
+<input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+  <div class="govuk-form-group">
+<label class="govuk-label" for="width-10">
+  What level NVQ is the training?
+</label>
+<input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+  <div class="govuk-form-group">
+<label class="govuk-label" for="width-10">
+  How many people will receive the training?
+</label>
+<input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="width-10">
+How many years will this training be offered?
+</label>
+<input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    Description of training
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+        <button class="govuk-button">Add training</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
